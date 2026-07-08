@@ -42,9 +42,11 @@ function FeaturedProducts() {
               md: 3,
             }}
           >
+
             <ProductCard
               product={product}
             />
+
           </Grid>
         ))}
 

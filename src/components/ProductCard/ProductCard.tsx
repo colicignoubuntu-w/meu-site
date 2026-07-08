@@ -6,6 +6,8 @@ import {
   Button,
 } from "@mui/material";
 
+import { Link } from "react-router-dom";
+
 
 interface Product {
   id: number;
@@ -76,6 +78,8 @@ function ProductCard({ product }: ProductCardProps) {
 
 
         <Button
+          component={Link}
+          to={`/produto/${product.id}`}
           variant="contained"
           fullWidth
           sx={{
