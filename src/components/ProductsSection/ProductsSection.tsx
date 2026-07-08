@@ -8,7 +8,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import products from "../../data/products";
 
 
-function FeaturedProducts() {
+function ProductsSection() {
   return (
     <Container
       maxWidth="lg"
@@ -55,4 +55,4 @@ function FeaturedProducts() {
 }
 
 
-export default FeaturedProducts;
+export default ProductsSection;
