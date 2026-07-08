@@ -2,10 +2,11 @@ import {
   Box,
   Button,
   Container,
-  Grid,
   Stack,
   Typography,
 } from "@mui/material";
+
+import Grid from "@mui/material/Grid";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -14,11 +15,13 @@ import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 
 import banner from "../../assets/images/banner.png";
 
+
 function Hero() {
   return (
     <Box
       sx={{
-        background: "linear-gradient(180deg,#fafafa 0%,#f3f3f3 100%)",
+        background:
+          "linear-gradient(180deg,#fafafa 0%,#f3f3f3 100%)",
         py: { xs: 8, md: 12 },
       }}
     >
@@ -26,10 +29,18 @@ function Hero() {
         <Grid
           container
           spacing={8}
-          alignItems="center"
+          sx={{
+            alignItems: "center",
+          }}
         >
+
           {/* Texto */}
-          <Grid size={{ xs: 12, md: 5 }}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 5,
+            }}
+          >
             <Typography
               sx={{
                 color: "secondary.main",
@@ -40,6 +51,7 @@ function Hero() {
             >
               NOVA COLEÇÃO 2026
             </Typography>
+
 
             <Typography
               variant="h2"
@@ -56,6 +68,7 @@ function Hero() {
               o seu estilo.
             </Typography>
 
+
             <Typography
               sx={{
                 color: "text.secondary",
@@ -69,11 +82,14 @@ function Hero() {
               entrega rápida para todo o Brasil.
             </Typography>
 
+
             <Stack
               direction="row"
               spacing={2}
-              flexWrap="wrap"
-              mb={6}
+              sx={{
+                flexWrap: "wrap",
+                mb: 6,
+              }}
             >
               <Button
                 variant="contained"
@@ -83,6 +99,7 @@ function Hero() {
                 Comprar Agora
               </Button>
 
+
               <Button
                 variant="outlined"
                 size="large"
@@ -91,11 +108,18 @@ function Hero() {
               </Button>
             </Stack>
 
+
             <Stack spacing={3}>
+
               <Stack direction="row" spacing={2}>
                 <LocalShippingOutlinedIcon color="primary" />
+
                 <Box>
-                  <Typography fontWeight={600}>
+                  <Typography
+                    sx={{
+                      fontWeight: 600,
+                    }}
+                  >
                     Frete grátis
                   </Typography>
 
@@ -105,10 +129,16 @@ function Hero() {
                 </Box>
               </Stack>
 
+
               <Stack direction="row" spacing={2}>
                 <AutorenewOutlinedIcon color="primary" />
+
                 <Box>
-                  <Typography fontWeight={600}>
+                  <Typography
+                    sx={{
+                      fontWeight: 600,
+                    }}
+                  >
                     Troca facilitada
                   </Typography>
 
@@ -118,10 +148,16 @@ function Hero() {
                 </Box>
               </Stack>
 
+
               <Stack direction="row" spacing={2}>
                 <SecurityOutlinedIcon color="primary" />
+
                 <Box>
-                  <Typography fontWeight={600}>
+                  <Typography
+                    sx={{
+                      fontWeight: 600,
+                    }}
+                  >
                     Pagamento seguro
                   </Typography>
 
@@ -130,11 +166,18 @@ function Hero() {
                   </Typography>
                 </Box>
               </Stack>
+
             </Stack>
           </Grid>
 
-          {/* Foto */}
-          <Grid size={{ xs: 12, md: 7 }}>
+
+          {/* Imagem */}
+          <Grid
+            size={{
+              xs: 12,
+              md: 7,
+            }}
+          >
             <Box
               component="img"
               src={banner}
@@ -145,9 +188,7 @@ function Hero() {
                   xs: 450,
                   md: 720,
                 },
-
                 objectFit: "cover",
-
                 borderRadius: 6,
 
                 boxShadow:
@@ -161,10 +202,12 @@ function Hero() {
               }}
             />
           </Grid>
+
         </Grid>
       </Container>
     </Box>
   );
 }
+
 
 export default Hero;

@@ -1,11 +1,13 @@
 import {
   Container,
-  Grid,
   Typography,
 } from "@mui/material";
 
+import Grid from "@mui/material/Grid";
+
 import CategoryCard from "../CategoryCard/CategoryCard";
 import categories from "../../data/categories";
+
 
 function Categories() {
   return (
@@ -17,17 +19,27 @@ function Categories() {
     >
       <Typography
         variant="h4"
-        fontWeight="bold"
-        mb={4}
+        sx={{
+          fontWeight: 700,
+          mb: 4,
+        }}
       >
         Categorias
       </Typography>
 
-      <Grid container spacing={4}>
+
+      <Grid
+        container
+        spacing={4}
+      >
         {categories.map((category) => (
           <Grid
             key={category.id}
-            size={{ xs: 12, sm: 6, md: 3 }}
+            size={{
+              xs: 12,
+              sm: 6,
+              md: 4,
+            }}
           >
             <CategoryCard
               name={category.name}
@@ -39,5 +51,6 @@ function Categories() {
     </Container>
   );
 }
+
 
 export default Categories;

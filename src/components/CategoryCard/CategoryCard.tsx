@@ -1,11 +1,21 @@
-import { Card, CardMedia, CardContent, Typography } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+} from "@mui/material";
+
 
 type Props = {
   name: string;
   image: string;
 };
 
-function CategoryCard({ name, image }: Props) {
+
+function CategoryCard({
+  name,
+  image,
+}: Props) {
   return (
     <Card
       sx={{
@@ -23,13 +33,16 @@ function CategoryCard({ name, image }: Props) {
         component="img"
         height="240"
         image={image}
+        alt={name}
       />
 
       <CardContent>
         <Typography
           align="center"
           variant="h6"
-          fontWeight="bold"
+          sx={{
+            fontWeight: 700,
+          }}
         >
           {name}
         </Typography>
